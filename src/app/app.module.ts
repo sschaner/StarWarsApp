@@ -8,16 +8,17 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { PeopleModule } from './people/people.module';
 import { PeopleListComponent } from './people/people-list/people-list.component';
+import { PlanetsModule } from './planets/planets.module';
+import { PlanetsListComponent } from './planets/planets-list/planets-list.component';
 
 const routes: Routes = [
-  { path: 'people', component: PeopleListComponent},
-  { path: '', redirectTo: '/people', pathMatch: 'full'}
-]
+  { path: 'people', component: PeopleListComponent },
+  { path: 'planets', component: PlanetsListComponent },
+  { path: '', redirectTo: '/people', pathMatch: 'full' },
+];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule,
@@ -25,8 +26,9 @@ const routes: Routes = [
     AppRoutingModule,
     CoreModule,
     PeopleModule,
+    PlanetsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
