@@ -1,7 +1,26 @@
 <div>
-    <h1>People</h1>
-    <hr>
-    <li *ngFor="let person of people.results">
-        <h3>{{ person.name }}</h3>
-    </li>
+  <h1>Characters in Star Wars</h1>
+
+  <table class="table table-sm table-striped table-bordered">
+    <thead>
+      <tr class="table-warning">
+        <th scope="col">Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Date of Birth</th>
+        <th scope="col">Hair Color</th>
+        <th scope="col">Skin Color</th>
+        <th scope="col">Eye Color</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of people.results">
+        <td>{{ person.name }}</td>
+        <td>{{ person.gender }}</td>
+        <td>{{ person.birth_year }}</td>
+        <td>{{ person.hair_color }}</td>
+        <td>{{ person.skin_color }}</td>
+        <td>{{ person.eye_color }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

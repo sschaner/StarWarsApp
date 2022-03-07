@@ -1,7 +1,28 @@
 <div>
-  <h1>Planets</h1>
-  <hr />
-  <li *ngFor="let planet of planets.results">
-    <h3>{{ planet.name }}</h3>
-  </li>
+  <h1>Planets in Star Wars</h1>
+
+  <table class="table table-sm table-striped table-bordered">
+    <thead>
+      <tr class="table-warning">
+        <th scope="col">Name</th>
+        <th scope="col">Rotation Period</th>
+        <th scope="col">Orbital Period</th>
+        <th scope="col">Climate</th>
+        <th scope="col">Gravity</th>
+        <th scope="col">Terrain</th>
+        <th scope="col">Population</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let planet of planets.results">
+        <td>{{ planet.name }}</td>
+        <td>{{ planet.rotation_period }}</td>
+        <td>{{ planet.orbital_period }}</td>
+        <td>{{ planet.climate }}</td>
+        <td>{{ planet.gravity }}</td>
+        <td>{{ planet.terrain }}</td>
+        <td>{{ planet.population }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
